@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playzone</title>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+  <!-- script for reloading the page. -->
+  <script>
+    function reloadPage() {
+      location.reload();
+    }
+  </script>
+  <script src="script.js"></script>
+
+  
+  <h1>PlayZone</h1>
+  <!-- <div id="target"></div>
+          <div id="teamscore"></div> -->
+  <table id="Scores">
+    <tr>
+      <td id="Target">Target</td>
+      <td id="target"></td>
+    </tr>
+    <tr>
+      <td id="Teamscore"></td>
+      <td id="teamscore"></td>
+    </tr>
+  </table>
+  <div id="playerName"></div>
+  <table id="grid"></table>
+  <!-- score-card -->
+  <table id="score-card">
+    <tr>
+      <td id="player1"></td>
+      <td id="player1score">0(0)</td>
+    </tr>
+    <tr>
+      <td id="player2"></td>
+      <td id="player2score">0(0)</td>
+    </tr>
+    <tr>
+      <td id="player3"></td>
+      <td id="player3score">0(0)</td>
+    </tr>
+    <tr>
+      <td id="player4"></td>
+      <td id="player4score">0(0)</td>
+    </tr>
+    <tr>
+      <td id="player5"></td>
+      <td id="player5score">0(0)</td>
+    </tr>
+  </table>
+<button id="New-game" onclick="reloadPage()">New-game</button>
+<button id="play-again">Play Again</button>
+
+</body>
+</html>

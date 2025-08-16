@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minesweeper Cricket</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Styles for the page */
+  </style>
+  <script>
+    // JavaScript function to redirect to the playzone
+    function redirectToPlayzone() {
+      // Get the team name input value
+      const teamName = document.getElementById("Team-name").value;
+      // Get the grid size input value
+      const gridSize = document.getElementById("grid-size").value;
+      // Get the match type input value
+      const matchtype = document.getElementById("matchtype").value;
+      // Redirect to the playzone.html page with the selected options as query parameters
+      window.location.href = `playzone.html?Team-name=${teamName}&grid-size=${gridSize}&matchtype=${matchtype}`;
+    }
+  </script>
+</head>
+<body>
+  
+    <div class="Heading">
+      <span>Minesweeper Hand Cricket</span>
+    </div>
+    <form id="game-form" onsubmit="event.preventDefault(); redirectToPlayzone();">
+      <!-- Input field for team name -->
+      <label for="Team-name">Team name:</label>
+      <input type="text" id="Team-name" name="Team-name" required>
+      <br>
+      <!-- Dropdown menu for selecting difficulty (grid size) -->
+      <label for="grid-size">Difficulty:</label>
+      <select id="grid-size" name="grid-size">
+        <option value="6">6x6 (Difficult)</option>
+        <option value="7">7x7 (Intermediate)</option>
+        <option value="8">8x8 (Intermediate)</option>
+        <option value="10">10x10 (Easy)</option>
+      </select>
+      <br>
+      <!-- Dropdown menu for selecting match type (scoring level) -->
+      <label for="matchtype">Type of match:</label>
+      <select name="matchtype" id="matchtype">
+        <option value="0">Low Scoring</option>
+        <option value="1">Medium Scoring</option>
+        <option value="2">High Scoring</option>
+      </select>
+      <br><br><br>
+      <!-- Button to submit the form and start the game -->
+      <button id="start" type="submit" onclick="redirectToPlayzone()">Let's Play</button>
+    </form>
+    
+    
+</body>
+</html>
